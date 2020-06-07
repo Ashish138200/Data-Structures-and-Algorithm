@@ -1,0 +1,34 @@
+* Divide and conqueror algo
+* Recursive algo
+* Uses pivot element to partition the array into two parts
+* Elements < pivot to its left,elements > pivot to its right
+* Pivot will then be in its correct sorted position
+* Process is now repeated for the left[] and right[]
+* Eventually, every element has been pivot, so every element will be in its correct sorted position
+* As the merge sort, we'll end up partitioning the array into a series of 1-element arrays
+* Does this in-place(unlike merge sort)
+
+int[] arr={20,35,-15,7,55,1,-22};
+
+Algorithm
+    * start = 0 ; i=start
+    * end = 7 ; j = end
+    * pivot = 20(array[start])
+    * We start with --j and go from right to left, looking for the first element that's less than the pivot element
+    * -22 is less than the pivot element, so we assign it to position i, which is 0
+    * j = 6
+    * Now, we switch to i.We start with i++ and go from left to right , looking for the first element that's greater
+      than the pivot element
+    * 35 is greater than the pivot so,we assign it to position j, which is 6
+    * i = 1
+
+* By alternating between going from right to left and vice versa, we can be sure we won't lose any values
+* Now we check whether the values of i and j have crossed each other. if i<j they haven't, so, we switch back to j and
+  look for the first element that's less than the pivot.
+
+* In-place algo
+* O(nlogn)[average case] - base 2 :We're repeatedly partitioning the array into two halves
+* O(n^2)[worst case]
+* Performs better than merge sort
+* Unstable algo
+* Choice of pivot can have an affect on the TC.
