@@ -1,0 +1,14 @@
+* LastUnsortedIndex = n :- this is the last index of the unsorted partition
+* i = 1 :- index used to traverse the array from left to right
+* largest = 0 :- index of the largest element in unsorted partition
+* First find the largest element in array and put it at the last index and then repeat this expect for the last
+  element
+  i++
+  LastUnsortedIndex = n-1 :- this is the last index of the unsorted partition
+* Its is called selection sort because on each traversal we're selecting the largest element and moving it to sorted
+  partition
+* In-place algo
+* O(n^2) is the TC
+* It'll take 100 steps to sort 10 items and so on...
+* Doesn't require as much swapping as Bubble Sort
+* Unstable Sort algo

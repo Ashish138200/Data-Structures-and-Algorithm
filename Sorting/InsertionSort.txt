@@ -1,0 +1,10 @@
+* FirstUnsortedIndex = 1 :- this is the first index of the unsorted partition
+* i = 0 :- index used to traverse the array from right to left
+* newElement = index[1] :- the value we wanna insert into the sorted partition - array[FUI]
+
+* In-place algo
+* O(n^2) is the TC but if the values are nearly sorted then it runs in a linear time O(n) because it doesn't have to
+  do much shifting.
+* It'll take 100 steps to sort 10 items and so on...
+* Stable Sort algo
+* A lot of shifting in this algo

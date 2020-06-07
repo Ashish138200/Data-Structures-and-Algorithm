@@ -1,0 +1,38 @@
+* Variation of Insertion Sort
+* Insertion sort choose wich element to insert using a gap of 1
+* Shell sort starts out using a larger gap value
+* As the algo runs, the gap is reduced
+* Goal is to reduce the amount of shifting required
+* As the algo progresses, the gap is reduced
+* The last gap value is always 1
+* A gap value of 1 is equivalent to insertion sort
+* So, the algo does some preliminary work(using gap values > 1), and the becomes insertion sort
+* By the time we get to see insertion sort,the array has been partially sorted, so there's less shifting required
+
+knuth Sequence:
+    * gap is calculated using(3^k -1)/2
+    * We set k based on the length of the array
+    * We want the gap to be as close as possible to the length of the array we want to sort without being greater
+      than the length.
+
+Algorithm
+    * We'll base our gap on the array's length. We'll initialize the gap(or interval) to array.length/2
+    * on each iteration, we'll divide the gap value by 2to get the next gap value
+    * For our array, the gap will be initialized to 3
+    * On the next iteration, it will be 1 - insertion sort
+    # i = gap = 3
+    # j= i =3
+    # newElement = array[i] = 7
+    # compare array[j- gap] with newElement
+
+* We have completed the iteration with gap 3
+* The array is more sorted
+* Now we update the gap(gap/2)
+* The gap will become 1, we are switching to insertion sort
+
+* In-place algo
+* Difficult to nail down the TC because it will depend on the gap. Worst case: O(n^2), but it can perform much better
+  than that
+* Doesn't require as much shifting as insertion sort, so it usually performs better
+* Unstable Sort algo
+* You can apply Shell sort to Bubble sort too

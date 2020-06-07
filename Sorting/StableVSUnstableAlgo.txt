@@ -1,0 +1,8 @@
+Unstable Sort
+    *When an array have duplicate values
+    *In this sort the relative ordering of duplicate items will not be preserved
+Stable Sort
+    *When an array have duplicate values
+    *In this sort the relative ordering of duplicate items will be preserved
+*Stable sort is preferable
+*For integers the US/SS doesn't matter but for the objects like string it matters.

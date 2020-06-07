@@ -1,0 +1,15 @@
+<<-Factorial Algorithm->>
+    1 If num is equal to 0, The factorial is 1.Stop. We've the result
+      Otherwise...
+    2 set multiplier to 1
+    3 set factorial to 1
+    4 while multiplier is not equal to num, do step 5 and 6
+    5 multiply factorial by multiplier and assign the result to factorial
+    6 add 1 to multiplier
+    7 Stop. The result is factorial
+* The iterative implementation usually runs faster and it doesn't uses much memory because its overhead involved
+  with pushing method calls onto the call stack and each stack frame uses some memory.
+* But sometimes the iterative way isn't the intuitive because the loc are huge so, developers use recursive way
+* Call stack = recursion stack
+* Stack overflow can happen if call you call the method million times even if you've base condition to overcome
+  this we've tail recursion(JRE doesn't use tail recursion).

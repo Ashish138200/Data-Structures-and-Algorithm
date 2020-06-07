@@ -1,0 +1,15 @@
+* unsortedPartitionIndex = n - this is the last index of the unsorted partition
+* i = 0 - index used to traverse the array from left to right
+* if the element at index[0]>index[1] we swap the elements
+* and if it's large we don't do anything because we wanna put large elements at last
+* i++
+* if i==n:
+    unsortedPartitionIndex = (n-1) - this is the last index of the unsorted partition
+    i = 0 - index used to traverse the array from left to right
+
+* In-place algo
+* O(n^2) is the TC
+* It'll take 100 steps to sort 10 items and so on...
+* Algo degrades quickly
+* Least efficient algo
+* Stable Sort algo

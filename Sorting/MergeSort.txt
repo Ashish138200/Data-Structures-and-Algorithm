@@ -1,0 +1,39 @@
+* Divide and conquer Algo
+* Recursive Algo
+* Two phase: Splitting and Merging
+* Splitting phase leads to faster sorting during the Merging phase
+* Splitting logical. We don't create new arrays
+
+Splitting Phase
+    * Start with an unsorted array
+    * Divide the array into two arrays, which are unsorted. The first array is the left array, and the second array
+      is the right array
+    * Split the left and right arrays into arrays each
+    * Keep splitting until all the arrays have only one element each - these arrays are sorted
+    * In-place
+
+Merging Phase
+    * merge every left/right pair of sibling array into a sorted array
+    * After the first merge,we'll have a bunch of 2-element sorted arrays
+    * Then merge those sorted arrays(left/right siblings) to end up with a bunch of 4-element sorted arrays
+    * Repeat until you've a single sorted array
+    * Not in-place.Uses temporary arrays
+
+Algorithm
+    * start = 0 ; end = n
+    * midpoint = (start+end)/2
+    * the end index is always +1 then the original one
+* We merge sibling left and right arrays
+* We create a temp array large enough to hold all the elements in the arrays we're merging
+* We set i to the first index of the left arr, and j to the 1st index of right arr
+* We compare left[i] to right[j]. Ig\f left is smaller, we copy it to the tep array i++ .If right is smaller,
+  we copy it to the temp arr and j++
+* We repeat this process until all elements in the 2 arr have been processed
+* At this point, the temp arr contains the merged values in sorted order
+* We copy this temp arr back to the original array,at the correct positions
+* If the left[] is at position x to y, and the right[] is at position y+1 to z,the after the copy,positions x to z
+  will be sorted in the original array
+
+* NOT an in-place algo
+* O(nlogn) - base 2.We're repeatedly dividing the array in half during the splitting phase
+* Stable algo
