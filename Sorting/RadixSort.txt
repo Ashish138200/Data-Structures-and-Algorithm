@@ -1,0 +1,21 @@
+(✷‿✷)
+* Makes assumptions about the data
+* Data must have same radix(no. unique digits and values) and width(no. of letters)
+  Radix for decimals is 10[0-9]
+  Radix for English alphabets is 26[A-Z]
+  Width of hello is 5
+  width of 10 is 2
+* Because of this, data must be integers or strings
+* Sort based on each individual digit or letter position
+* Start at the rightmost position
+* Must use a stable sort algo at each stage
+        #int[] arr= {1330,4586,1594,4725,5729,8792}━☞┐
+        1's position = {1330,8792,1594,4725,4586,5729} ━☞┐
+        10's position = {4725,5729,1330,4586,8729,1594} ━☞┐
+        100's position = {1330,4586,1594,4725,5729,8792} ━☞┐
+        1000's position = {1330,1594,4586,4725,5729,8792} メ
+* Counting Sort is often used as the sort the sort algorithm for radix sort - must be stable counting sort
+* O(n) - can achieve this because we're making assumptions about the data we're sorting
+* Even so, it often runs slower than O(nlogn) algorithms because of the overhead involved
+* In-place depends on which sort algorithm you use
+* Stable algorithm
