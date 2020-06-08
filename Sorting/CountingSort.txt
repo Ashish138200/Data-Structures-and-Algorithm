@@ -1,0 +1,8 @@
+* Makes assumptions about the data
+* Doesn't Use the comparison
+* Counts the no. of occurrence of each value
+* Only works with non-negative discrete values(can't work with float,strings)
+* Values must be within a specific range
+* Not an in-place algo
+* O(n)-can achieve this because we're making assumption about the data we're sorting
+* If we want the sort to be stable, we've to do some extra steps
