@@ -1,0 +1,16 @@
+* Requires extra steps
+* Can calculate where values should be written to the original array
+* Writing the values into the array in backwards order ensures stability
+        #int[] arr= {1330,4586,1594,4725,5729,8792}━☞┐
+        1's position = {1330,8792,1594,4725,4586,5729} ━☞┐
+        10's position = {}
+                        -must be a stable sort
+                        1594 must remain after 8792; 5729 must remain after 4725
+                        Create a temp array that matches the length of the array we're sorting
+* This works because we traverse the input array from right to left, and we write duplicate values into the temp array
+  from right to left
+* If we know that duplicate values will go into position 3 and 4 , we write the rightmost value int the input array into
+  position 4 , and the leftmost value into position 3
+* This preserves the relative positioning of duplicate values
+* By adjusting the counting array after the initial pass, we can map values to indices in the temp array
+* Can also use linked lists to make counting sort stable
