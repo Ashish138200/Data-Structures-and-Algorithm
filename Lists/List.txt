@@ -1,0 +1,6 @@
+ArrayList
+    * Resizeable array implementation of the List interface
+    * Backing array
+    * Capacity: is the max no. of items that a list can hold
+    * Default capacity is 10
+    * Size: is the no. of items that are actually in the list
