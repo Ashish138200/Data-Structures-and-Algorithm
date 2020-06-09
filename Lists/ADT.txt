@@ -1,0 +1,5 @@
+* Doesn't dictate how the data is organised
+* Dictates the operations you can perform
+* Concrete data structure is usually a concrete class
+* Abstract data type is usually an interface
+* ADT is more about behaviour and what operations you can do
