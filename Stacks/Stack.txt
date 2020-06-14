@@ -1,0 +1,14 @@
+(✷‿✷)
+* Abstract Data Type
+* LIFO: Last In, First Out
+* push - adds an item as the top item on the stack
+* pop - removes the top item on the stack
+* peek - gets the top item on the stack without popping it
+* Ideal backing data structure: linked list
+* We don not use arraylist or vectors because they both are backed by an array.
+
+* O(1) for push,pop, and peek ,when using a linked list
+* If you use an array, the push is O(n), because the array may have to be resized
+* If you know the maximum number of items that will ever be on the stack, an array can be good choice.
+* If the memory is tight, an array might be a good choice
+* Linked list is ideal
