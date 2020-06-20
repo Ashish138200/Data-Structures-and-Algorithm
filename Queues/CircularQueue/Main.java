@@ -13,16 +13,16 @@ public class Main {
         Employee billEnd = new Employee("Bill", "End", 78);
 
         ArrayCircularQueue1 queue = new ArrayCircularQueue1(5);
-        queue.add(janeJones);
-        queue.add(johnDoe);
-        queue.remove();
-        queue.add(marySmith);
-        queue.remove();
-        queue.add(mikeWilson);
-        queue.remove();
-        queue.add(billEnd);
-        queue.remove();
-        queue.add(janeJones);
+        queue.enqueue(janeJones);
+        queue.enqueue(johnDoe);
+        queue.dequeue();
+        queue.enqueue(marySmith);
+        queue.dequeue();
+        queue.enqueue(mikeWilson);
+        queue.dequeue();
+        queue.enqueue(billEnd);
+        queue.dequeue();
+        queue.enqueue(janeJones);
         queue.printQueue();
     }
 }
