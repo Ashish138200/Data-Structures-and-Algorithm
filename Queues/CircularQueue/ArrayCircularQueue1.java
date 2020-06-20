@@ -11,7 +11,7 @@ public class ArrayCircularQueue1 {
         queue = new Employee[capacity];
     }
 
-    public void add(Employee employee){
+    public void enqueue(Employee employee){
         /*
         * 0 jane
         * 1 john
@@ -45,7 +45,7 @@ public class ArrayCircularQueue1 {
             back = 0;
         }
     }
-    public Employee remove(){
+    public Employee dequeue(){
         if (size() == 0){
             throw new NoSuchElementException();
         }
