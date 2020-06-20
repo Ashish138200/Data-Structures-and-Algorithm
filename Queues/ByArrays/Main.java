@@ -12,24 +12,24 @@ public class Main {
         Employee billEnd = new Employee("Bill", "End", 78);
 
         ArrayQueue queue = new ArrayQueue(10);
-        queue.add(janeJones);
-        queue.add(johnDoe);
-        queue.add(marySmith);
-        queue.add(mikeWilson);
-        queue.add(billEnd);
+        queue.enqueue(janeJones);
+        queue.enqueue(johnDoe);
+        queue.enqueue(marySmith);
+        queue.enqueue(mikeWilson);
+        queue.enqueue(billEnd);
         //queue.printQueue();
         //System.out.println();
-        queue.remove();
-        queue.remove();
+        queue.dequeue();
+        queue.dequeue();
         //queue.printQueue();
         //System.out.println();
         //System.out.println(queue.peek());
-        queue.remove();
-        queue.remove();
-        queue.remove();
+        queue.dequeue();
+        queue.dequeue();
+        queue.dequeue();
         //queue.remove();
         //System.out.println();
-        queue.add(mikeWilson);
+        queue.enqueue(mikeWilson);
 
 
         queue.printQueue();
