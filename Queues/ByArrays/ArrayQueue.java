@@ -12,7 +12,7 @@ public class ArrayQueue {
         queue = new Employee[capacity];
     }
 
-    public void add(Employee employee) {
+    public void enqueue(Employee employee) {
         if (back == queue.length) { //If the queue if full
             // the we need to resize the queue
             Employee[] newArray = new Employee[2 * queue.length];
@@ -23,7 +23,7 @@ public class ArrayQueue {
         back++;
     }
 
-    public Employee remove() {
+    public Employee dequeue() {
         if (size() == 0) {
             throw new NoSuchElementException();
         }
