@@ -20,15 +20,17 @@ public class SimpleHashtable {
     public void put(String key, Employee employee) {
         int hashedKey = hashKey(key);
         if (occupied(hashedKey)) {
-            int stopIndex = hashedKey;
-            if (hashedKey == hashtable.length - 1) {
+            int stopIndex = hashedKey; // we need to know when to stop looking
+            //Creating the value for the first probe
+            if (hashedKey == hashtable.length - 1) { //Wrapping
                 hashedKey = 0;
             }
             else {
                 hashedKey++;
             }
 
-            while (occupied(hashedKey) && hashedKey != stopIndex) {
+            while (occupied(hashedKey) && hashedKey != stopIndex) { //looping the probe value
+                //set the next probe value and wrapping too
                 hashedKey = (hashedKey + 1) % hashtable.length;
             }
         }
@@ -44,37 +46,36 @@ public class SimpleHashtable {
     public Employee get(String key) {
         int hashedKey = findKey(key);
         if (hashedKey == -1) {
-            return null;
+            return null; // no employee with the we're looking for
         }
         return hashtable[hashedKey].employee;
     }
-
+    //Hashing()
     private int hashKey(String key) {
         return key.length() % hashtable.length;
     }
 
     private int findKey(String key) {
         int hashedKey = hashKey(key);
-        if (hashtable[hashedKey] != null &&
-                hashtable[hashedKey].key.equals(key)) {
+        //If the employee stored at the hashed key index was added with the key that we're interested in
+        if (hashtable[hashedKey] != null && hashtable[hashedKey].key.equals(key)) {
             return hashedKey;
         }
 
         int stopIndex = hashedKey;
+        //First Probe
         if (hashedKey == hashtable.length - 1) {
             hashedKey = 0;
         }
         else {
             hashedKey++;
         }
-
-        while (hashedKey != stopIndex &&
-                hashtable[hashedKey] != null &&
-                !hashtable[hashedKey].key.equals(key)) {
+        //!hashtable[hashedKey].key.equals(key): and key at the hashtable hashedKey also not the one we're looking for
+        while (hashedKey != stopIndex && hashtable[hashedKey] != null && !hashtable[hashedKey].key.equals(key)) {
             hashedKey = (hashedKey + 1) % hashtable.length;
         }
 
-        if (stopIndex == hashedKey) {
+        if (stopIndex == hashedKey) { //looked at the entire array
             return -1;
         }
         else {
@@ -82,7 +83,7 @@ public class SimpleHashtable {
         }
 
     }
-
+    //Checks whether the given position is occupied or not
     private boolean occupied(int index) {
         return hashtable[index] != null;
     }
