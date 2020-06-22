@@ -9,21 +9,22 @@ public class SimpleHashtable {
         hashtable = new Employee[10];
     }
 
+    // add value to hashtable
     public void put(String key, Employee employee) {
-        int hashedKey = hashKey(key);
-        if (hashtable[hashedKey] != null) {
+        int hashedKey = hashKey(key); //Hashing
+        if (hashtable[hashedKey] != null) { // handling collisions
             System.out.println("Sorry, there's already an employee at position " + hashedKey);
         }
-        else {
+        else { // assigning the employee int hashtable at hashedKey position
             hashtable[hashedKey] = employee;
         }
     }
-
+    //retrieval
     public Employee get(String key) {
-        int hashedKey = hashKey(key);
-        return hashtable[hashedKey];
+        int hashedKey = hashKey(key); //Hashing
+        return hashtable[hashedKey]; // O(1)
     }
-
+    //Hashing Function and it's private because we don't need to expose it to the world
     private int hashKey(String key) {
         return key.length() % hashtable.length;
     }
