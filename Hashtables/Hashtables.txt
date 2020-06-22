@@ -30,3 +30,7 @@ Retrieve a value from a Hash Table
     * Provide a key
     * Use a hash function to hash the key to an int
     * Retrieve the value stored at the hashed key value
+
+* Load factor and Hashing() are going to influence the TC if the load factor is really high then
+  adding an item you'll get more collisions and for retrieval TC will get degrade. You might not able to achieve
+  constant time.
