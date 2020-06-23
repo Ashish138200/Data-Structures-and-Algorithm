@@ -8,4 +8,5 @@
 * Hashtables
 * Trees
 * Heaps
-* Sorting
+* Sort Algorithms
+* Search Algorithms
