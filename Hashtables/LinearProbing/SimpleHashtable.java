@@ -43,6 +43,16 @@ public class SimpleHashtable {
         }
     }
 
+    public Employee remove(String key) {
+        int hashedKey = findKey(key);
+        if (hashedKey == -1) {
+            return null;
+        } else {
+            Employee employee = hashtable[hashedKey].employee;
+            hashtable[hashedKey] = null;
+            return employee;
+        }
+    }
     public Employee get(String key) {
         int hashedKey = findKey(key);
         if (hashedKey == -1) {
@@ -74,12 +84,12 @@ public class SimpleHashtable {
         while (hashedKey != stopIndex && hashtable[hashedKey] != null && !hashtable[hashedKey].key.equals(key)) {
             hashedKey = (hashedKey + 1) % hashtable.length;
         }
-
-        if (stopIndex == hashedKey) { //looked at the entire array
-            return -1;
-        }
-        else {
+        // Update to avoid null pointer exception
+        if (hashtable[hashedKey]!=null && hashtable[hashedKey].key.equals(key)){
             return hashedKey;
+        }
+        else{
+            return -1;
         }
 
     }
