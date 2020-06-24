@@ -50,6 +50,13 @@ public class SimpleHashtable {
         } else {
             Employee employee = hashtable[hashedKey].employee;
             hashtable[hashedKey] = null;
+            StoredEmployee[] oht = hashtable; //oht = oldHashtable
+            hashtable = new StoredEmployee[oht.length];
+            for (int i = 0; i < oht.length ; i++) {
+                if (oht[i]!=null){
+                    put(oht[i].key,oht[i].employee);
+                }
+            }
             return employee;
         }
     }
