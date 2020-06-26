@@ -1,0 +1,6 @@
+(✷‿✷)
+* Data must be sorted
+* Chooses the element in the middle of the array and compares it against the search value
+* If the element is equal to the value, we're done
+* If element is greater than the value,search the left half of the array
+* If the element is less than the value,search the right half of the array
