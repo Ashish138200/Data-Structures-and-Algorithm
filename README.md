@@ -7,7 +7,7 @@
 - [x] LinkedList
 - [x] Stacks
 - [x] Queues
-- [ ] Hashtables
+- [x] Hashtables
 - [ ] Trees
 - [ ] Heaps
-- [ ] Search Algorithms
+- [x] Search Algorithms
