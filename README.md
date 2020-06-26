@@ -8,6 +8,7 @@
 - [x] Stacks
 - [x] Queues
 - [x] Hashtables
+- [x] Search Algorithms
 - [ ] Trees
 - [ ] Heaps
-- [x] Search Algorithms
+
