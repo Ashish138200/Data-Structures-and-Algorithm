@@ -20,18 +20,18 @@ public class Main {
         Employee employee = hashMap.putIfAbsent("Doe", mikeWilson);
         System.out.println(employee);
 
-        System.out.println(hashMap.getOrDefault("someone", mikeWilson));
+        //System.out.println(hashMap.getOrDefault("someone", mikeWilson)); //this method will return mikewilson if it
+        // doesn't matches with the given key
 
-        System.out.println(hashMap.remove("Jones"));
+        //System.out.println(hashMap.remove("Jones"));
 
         System.out.println(hashMap.containsKey("Doe"));
         System.out.println(hashMap.containsValue(janeJones));
-        Iterator<Employee> iterator = hashMap.values().iterator();
-        while (iterator.hasNext()) {
-            System.out.println(iterator.next());
-        }
+        //Iterator<Employee> iterator = hashMap.values().iterator();
+        //while (iterator.hasNext()) {
+        //    System.out.println(iterator.next());
+        //}
 
         hashMap.forEach((k, v) -> System.out.println("Key = " + k + ", Employee = " + v));
-
     }
 }
