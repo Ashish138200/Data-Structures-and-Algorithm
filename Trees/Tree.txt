@@ -1,0 +1,12 @@
+* Hierarchical Data Structure
+* Every item in the tree is a node
+* Tree have only one root node
+* Root node has no parent
+* Every non-root node has one parent only
+* Parents can have multiple children
+* A leaf node has no children
+* A singleton tree has only one node- the root
+* Depth of the node: no. of edges from root to the node
+* Height of the node: is the no. of edges on the longest path from the node to a leaf(for leaf node = 0)
+* Height of the tree: is the longest path from root node to the leaf
+* Level: of the tree contains the nodes that are at same depth(root = 0)
