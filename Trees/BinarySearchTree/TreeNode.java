@@ -5,6 +5,10 @@ public class TreeNode {
     private TreeNode left;
     private TreeNode right;
 
+    public TreeNode(int data) {
+        this.data = data;
+    }
+
     public void insert(int value){
         if (value == data) return; // will kick out the duplicate value
         if (value< data){
@@ -24,6 +28,38 @@ public class TreeNode {
             }
         }
     }
+    public TreeNode get(int value){
+        if (value == data) {
+            return this;
+        }
+        if (value< data){
+            if (left != null){
+                return left.get(value);
+            }
+        }
+        else{
+            if (right != null){
+                return right.get(value);
+            }
+        }
+        return null;
+    }
+    public int min(){
+        if (left == null){
+            return data;
+        }
+        else {
+            return left.min();
+        }
+    }
+    public int max(){
+        if (right==null){
+            return data;
+        }
+        else{
+            return right.max();
+        }
+    }
     public void traverseInOrder(){
         if (left != null){
             left.traverseInOrder();
@@ -32,10 +68,6 @@ public class TreeNode {
         if (right!=null){
             right.traverseInOrder();
         }
-    }
-
-    public TreeNode(int data) {
-        this.data = data;
     }
 
     public int getData() {
