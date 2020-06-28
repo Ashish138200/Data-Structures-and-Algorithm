@@ -1,0 +1,33 @@
+Three possibilities of deletion:
+    1 Node is a leaf
+    2 Node has one child
+    3 Node has two children
+
+                                       25
+                                      /   \
+                                     20    27
+                                    / \    / \
+                                  15  22  26  30
+                                    \         / \
+                                    17       29  32
+Case 1(Delete 17(a leaf)):
+  Null out the root 15 right child
+                                          25
+                                        /   \
+                                       20    27
+                                      / \    / \
+                                    15  22  26  30
+                                                / \
+                                               29  32
+
+Case 2(Delete 15(a node with one child)):
+    If it has only one child then we'll replace the child with the node we're deleting
+                                          25
+                                        /   \
+                                       20    27
+                                      / \    / \
+                                    17  22  26  30
+                                                / \
+                                               29  32
+
+Case 3():
