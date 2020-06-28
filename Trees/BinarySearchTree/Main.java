@@ -13,5 +13,11 @@ public class Main {
         intTree.insert(22);
         intTree.insert(32);
         intTree.traverseInOrder();
+        System.out.println();
+        //System.out.println(intTree.get(27));
+        //System.out.println(intTree.get(15));
+        //System.out.println(intTree.get(987));
+        System.out.println(intTree.min());
+        System.out.println(intTree.max());
     }
 }
