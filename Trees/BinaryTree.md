@@ -5,7 +5,7 @@
   two children and the last level have to at left as much as possible.
 * Full Binary Tree: is also a complete tree but every node has two children at every level.
 
-Binary Search Tree(BST):
+* Binary Search Tree(BST):
     * Can perform insertion,deletion,and retrievals in O(log n) time
     * The left child always has a smaller value than its parent
     * The right child always has a larger value than its parent
