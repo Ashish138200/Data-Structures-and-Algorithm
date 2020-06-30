@@ -9,6 +9,6 @@
 - [x] Queues
 - [x] Hashtables
 - [x] Search Algorithms
-- [ ] Trees
+- [x] Trees
 - [ ] Heaps
 

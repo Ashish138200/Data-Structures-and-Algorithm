@@ -3,9 +3,9 @@
 * Every element occupies the same amt of space in memory.
 * When you're working with objects(strings) whats stored in the variable is the object reference.
 * Calculating the memory address of xth element in an array:
-    # y = size of each element
-    # i = index
-    # Memory address = x+i*y
+    * y = size of each element
+    * i = index
+    * Memory address = x+i*y
 * Memory efficient if we know the index, TC: O(1)
 * Searching an element in array if we dunno the index then the worst case for finding the element is nth position
   so, the TC: O(n)
