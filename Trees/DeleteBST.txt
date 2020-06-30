@@ -30,4 +30,27 @@ Case 2(Delete 15(a node with one child)):
                                                 / \
                                                29  32
 
-Case 3():
+Case 3(Delete node with two children(20)):
+                                       25
+                                      /   \
+                                     17    27
+                                    / \    / \
+                                  15  22  26  30
+                                              / \
+                                             29  32
+
+Delete(27):
+                                       25
+                                      /   \
+                                     20    29
+                                    / \    / \
+                                  15  22  26  30
+                                    \           \
+                                    17           32
+
+* Need to figure out what the replacement node will be
+* Want minimal disruption to the existing tree structure
+* Can take the replacement node from the deleted node's left subtree or right subtree
+* If taking it from the left subtree, we have to take the largest value in the left subtree
+* If taking it from the right subtree, we have to take the smallest value in the right subtree
+* Choose one and stick to it
