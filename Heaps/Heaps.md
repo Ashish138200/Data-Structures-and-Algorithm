@@ -19,3 +19,7 @@
                       15   3  14  4
                      /
                    12
+##### Time Complexity of a heap:
+* Insertion: adding item is O(1) but heapifying makes it O(log n)
+* Deletion: Searching the item is O(n) and then heapifying makes it O(log n). <br/>
+If you want to delete some random item and you don't have the index then it is O(n log n).
