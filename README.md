@@ -10,5 +10,5 @@
 - [x] Hashtables
 - [x] Search Algorithms
 - [x] Trees
-- [ ] Heaps
+- [x] Heaps
 
